@@ -1,0 +1,106 @@
+
+*{
+    margin: 0;
+    
+}
+.head{
+    background-color: rgb(72, 127, 230);
+    height: 70px;
+    display:flex;
+    justify-content: space-between;
+    
+}
+.nav {
+    text-align: center;
+    padding: 15px;
+    font-size: 24px;
+    
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+a{
+    text-decoration: none;
+    color:#fff;
+}
+
+
+h1, h2, h3, p,  form, input, select, label {
+  margin: 20px;
+  padding: 10;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.bottom-section {
+  display: flex;
+  justify-content:space-evenly ;
+  padding: 30px;
+  margin-bottom: 6%;
+  background-color: #f3f6fd;
+}
+
+
+.contact-block {
+  flex-basis: 50%;
+  padding-top: 60px;
+}
+
+.contact-details {
+  line-height: 3;
+  font-size: 18px;
+}
+
+.form-section {
+  
+  width: 500px;
+  height: 600px;
+  border: 1px solid;
+}
+
+
+input[type="text"],
+input[type="email"],
+select {
+  width: 60%;
+  margin-bottom: 10px;
+  
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+label {
+  margin-right: 10px;
+}
+
+
+input[type="submit"] {
+  background-color: #3247a3;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #436ca8;
+}
+
+
+footer{
+    width: 100%;
+    height: 60px;
+    background-color: rgb(31, 92, 170);
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    padding-top: 20px;
+  }
+  
