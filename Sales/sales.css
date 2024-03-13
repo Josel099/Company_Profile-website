@@ -33,10 +33,10 @@ body {
  }
  .sidemenu-container{
     padding-top: 100px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
     background-color: #f9fbfd;
-    width: 250px;
+    width: 145px;
     text-align: center;
     margin-right: 20px;
     /* margin-top: 100px; */
@@ -47,12 +47,12 @@ body {
     text-decoration: none;
     display: block;
     color: #333;
-    font-size: 30px;
-    box-sizing: border-box;
-    border:  1px solid #333;
+    font-size: 20px;
+    
+    
     font-weight: bold;
     padding: 20px; 
-    background-color: #e5e6eb
+    background-color: #e6eafd
     
  }
  body {
