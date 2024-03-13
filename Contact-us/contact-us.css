@@ -25,7 +25,7 @@ a{
 }
 
 
-h1, h2, h3, p,  form, input, select, label {
+h1, h2, h3,form, select, label {
   margin: 20px;
   padding: 10;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -51,20 +51,56 @@ h1, h2, h3, p,  form, input, select, label {
   font-size: 18px;
 }
 
+
 .form-section {
   
   width: 500px;
-  height: 600px;
+  height: fit-content;
   border: 1px solid;
 }
+
+.message-input{
+  min-height: 100px;
+  width: 200px;
+  padding: 0%;
+}
+
+form p{
+  color: red;
+  font-size: small;
+  /* margin-left: 80px; */
+  margin-bottom: 10px;
+  align-items: end;
+  text-align: center;
+  width: 100px;
+
+}
+
+
+
+
+
+ 
+#firstname-alert,#lastname-alert,#email-alert1,#email-alert2,#number-alert1,#number-alert2,#gender-alert,#country-alert{
+  display: none;
+}
+/* #lastname-alert{
+  display: none;
+} */
+
+
+
+
+
+
+
 
 
 input[type="text"],
 input[type="email"],
 select {
   width: 60%;
-  margin-bottom: 10px;
-  
+  margin-bottom: 5px;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;

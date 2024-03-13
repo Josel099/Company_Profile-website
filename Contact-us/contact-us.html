@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>contact-us</title>
     <link rel="stylesheet" href="contact-us.css">
+    <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
     
@@ -34,17 +35,39 @@
                </p>
                <link rel="" href="">
         </div>
+
+<!-- js applying  for validation -->
+
+
         <div class="form-section">
-            <form>  
-                First Name: <input type="text" name="firstname"/> <br/>  
-                Last Name:  <input type="text" name="lastname"/> <br/>  
-                Email    : <input type="email" name="mail"/> <br/>  
-                phone number : <input type="text" name="number"/> <br/>
-                Gender : 
-                 <input type="radio" name="Gender" /> <label>male</label> 
-                 <input type="radio" name="Gender" /> <label>female</label>
-                 <input type="radio" name="Gender" />  <label>other</label><br>
-                country : <select name="country" id="">
+            <form  name="my-form" onsubmit=validateForm()>  
+                First Name*: <input type="text" name="firstname" placeholder="firstname"/><br>
+                <p id="firstname-alert"> enter firstname </p>
+                
+                Last Name*:  <input type="text" name="lastname" placeholder="lastname"/> <br> 
+                 <p id="lastname-alert"> enter last name  </p>
+
+
+                Email*   : <input type="text"  name="mail" placeholder="email"/> <br>   
+                <p id="email-alert1"> enter email</p>
+                <p id="email-alert2"> enter valid email </p>
+
+
+                phone number* : <input type="text" name="number"/> <br/>
+                <p id="number-alert1">enter phonenumber</p>
+                <p id="number-alert2">enter valid phonenumber</p>
+
+                
+
+
+                Gender* : 
+                <label>male</label>  <input type="radio" name="gender" value="male"/> 
+                 <label>female</label><input type="radio" name="gender" value="female"/> 
+                 <label>other</label><input type="radio" name="gender" value="none"/>  <br>
+                 <p id="gender-alert">must select one</p>
+
+                country* : <select name="country" >
+                    <option>none</option>
                     <option>India</option>
                     <option>China</option>
                     <option>Pakistan</option>
@@ -52,11 +75,21 @@
                     <option>Iran</option>
                     <option>Korea</option>
                 </select><br>
-                Message:  <input class="input" type="text" name="lastname"/> <br/>  
+                <p id="country-alert">select country</p>
+
+                Message:  <input class="message-input"  type="text"  name="Message"/> <br/>  
                 Agree to contact me : <input type="checkbox"> <br>
-                <input type="submit"  name="submit">
+                <input type="submit"  name="submit" >
+                <!-- <p id="fill-alert">Fill all the fields </p> -->
+               
             </form> 
         </div>
+
+
+
+
+<!-- js ending  -->
+
     </div>
     
     
