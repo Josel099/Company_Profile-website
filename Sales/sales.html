@@ -1,184 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sales</title>
-    <link rel="stylesheet" href="sales.css">
-</head>
-<body>
+    <link rel="stylesheet" href="sales.css" />
+     <script type="text/javascript" src="script.js"></script>
+  </head>
+
+  <body>
     <header class="head">
-        <img class="logo"src="/images/livares log.png" alt="">
-    <navbar class="nav">
-            
-            <a href="/index.html">Home</a>
-            <a href="/About-us/about-us.html">About-us</a>
-            <a href="#">Sales</a>
-            <a href="/Contact-us/contact-us.html">Contact us</a>
-    </navbar>
+      <img class="logo" src="/images/livares log.png" alt="" />
+      <navbar class="nav">
+        <a href="/index.html">Home</a>
+        <a href="/About-us/about-us.html">About-us</a>
+        <a href="#">Sales</a>
+        <a href="/Contact-us/contact-us.html">Contact us</a>
+      </navbar>
     </header>
 
-<div class="main">
-<div class="sidemenu-container">
-    
-        <a href="">Revenue</a> <br>
-        <a href="">Income </a><br>
-        <a href="">Profit</a><br>
-        <a href="">Loss</a><br>
-    
-</div>
+    <div class="main-container">
+      <div class="sidemenu-container">
+        <a href="#daily-sales-table" onclick="fadeMP()">Daily Sales</a> <br />
+        <a href="#monthly-sales-table" onclick="fadeDP()">Monthly Sales</a><br />
+        <a href="#productwise-sales-table" onclick="fadeDM()">Product wise Sales</a><br />
+      </div>
 
-    <div class="container">
-        <h1>Daily Sales</h1>
-        <table class="sales-table">
+      <div class="table-container">
+
+        <div id="daily-sales-table">
+          <h1>Daily Sales</h1>
+          <table class="sales-table">
             <thead>
-                <tr>
-                    <th>Date</th>
-                    <th>Product Name</th>
-                    <th colspan="2">Quantity </th>
-                    <th>Revenue</th>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td>Sold</td>
-                    <td>Unsold</td>
-                </tr>
+              <tr>
+                <th>Date</th>
+                <th>Product Name</th>
+                <th colspan="2">Quantity</th>
+                <th>Revenue</th>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Sold</td>
+                <td>Unsold</td>
+              </tr>
             </thead>
-            
+
             <tbody>
-                <tr>
-                    <td>23/03/2023</td>
-                    <td>water resource management software</td>
-                    <td>3</td>
-                    <td>5</td>
-                    <td>2.75 CR</td>
-                </tr>
-
-                <tr>
-                    <td>19/09/2023</td>
-                    <td>Product Life cycle software</td>
-                    <td>5</td>
-                    <td>17</td>
-                    <td>3.75 CR</td>
-                </tr>
-
-                <tr>
-                    <td>30/01/2024</td>
-                    <td>resource management</td>
-                    <td>6</td>
-                    <td>10 </td>
-                    <td>4.75 CR</td>
-                </tr>
-
-                <tr>
-                    <td>23/03/2023</td>
-                    <td>Library Management </td>
-                    <td>3</td>
-                    <td>2</td>
-                    <td>2.75 CR</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <h1>Monthly Sales</h1>
-        <table class="sales-table">
-            <thead>
-                <tr>
-                    <th>Month</th>
-                    <th>Product Name</th>
-                    <th colspan="2">Quantity Sold</th>
-                    <th>Revenue</th>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td>Sold</td>
-                    <td>Unsold</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                <td>January</td>
+              <tr>
+                <td>23/03/2023</td>
                 <td>water resource management software</td>
-                <td>11</td>
-                <td>4</td>
-                <td>12 CR</td>
-            </tr>
-            <tr>
-                <td>June</td>
-                <td>Education software</td>
-                <td>45</td>
-                <td>2</td>
-                <td>29 CR</td>
-            </tr>
-            <tr>
-                <td>October</td>
-                <td>resource management</td>
                 <td>3</td>
-                <td>13</td>
-                <td>75 Lakh</td>
+                <td>5</td>
+                <td>2.75 CR</td>
+              </tr>
+
+              <tr>
+                <td>19/09/2023</td>
+                <td>Product Life cycle software</td>
+                <td>5</td>
+                <td>17</td>
+                <td>3.75 CR</td>
+              </tr>
+
+              <tr>
+                <td>30/01/2024</td>
+                <td>resource management</td>
+                <td>6</td>
+                <td>10</td>
+                <td>4.75 CR</td>
+              </tr>
+
+              <tr>
+                <td>23/03/2023</td>
+                <td>Library Management</td>
+                <td>3</td>
+                <td>2</td>
+                <td>2.75 CR</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+        <div id="monthly-sales-table">
+                    <h1>Monthly Sales</h1>
+        <table class="sales-table">
+          <thead>
+            <tr>
+              <th>Month</th>
+              <th>Product Name</th>
+              <th colspan="2">Quantity Sold</th>
+              <th>Revenue</th>
             </tr>
             <tr>
-                <td>November</td>
-                <td>Libraray management</td>
-                <td>9</td>
-                <td>7</td>
-                <td>3 CR</td>
+              <td></td>
+              <td></td>
+              <td>Sold</td>
+              <td>Unsold</td>
             </tr>
-        
-            </tbody>
+          </thead>
+          <tbody>
+            <tr>
+              <td>January</td>
+              <td>water resource management software</td>
+              <td>11</td>
+              <td>4</td>
+              <td>12 CR</td>
+            </tr>
+            <tr>
+              <td>June</td>
+              <td>Education software</td>
+              <td>45</td>
+              <td>2</td>
+              <td>29 CR</td>
+            </tr>
+            <tr>
+              <td>October</td>
+              <td>resource management</td>
+              <td>3</td>
+              <td>13</td>
+              <td>75 Lakh</td>
+            </tr>
+            <tr>
+              <td>November</td>
+              <td>Libraray management</td>
+              <td>9</td>
+              <td>7</td>
+              <td>3 CR</td>
+            </tr>
+          </tbody>
         </table>
+        </div>
 
+
+        <div id="productwise-sales-table">
         <h1>Product-wise Sales</h1>
-        <table class="sales-table">
-            <thead>
-                <tr>
-                    <th>Product Name</th>
-                    <th colspan="2">Quantity Sold</th>
-                    <th>Revenue</th>
-                </tr>
-                  <tr>
-                    <td></td>
-                    <td>Sold</td>
-                    <td>Unsold</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Water resource Management </td>
-                    <td>31</td>
-                    <td>16</td>
-                    <td>35.23 CR</td>
-                </tr>
-                <tr>
-                    <td>Eucation Platform </td>
-                    <td>78</td>
-                    <td>9</td>
-                    <td>119.6 CR</td>
-                </tr>
-                <tr>
-                    <td>Library Management </td>
-                    <td>43</td>
-                    <td>12</td>
-                    <td>29.75 CR</td>
-                </tr>
-                <tr>
-                    <td>resource Management </td>
-                    <td>43</td>
-                    <td>23</td>
-                    <td>56.8 CR</td>
-                </tr>
-            </tbody>
+        <table class="sales-table" >
+          <thead>
+            <tr>
+              <th>Product Name</th>
+              <th colspan="2">Quantity Sold</th>
+              <th>Revenue</th>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Sold</td>
+              <td>Unsold</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Water resource Management</td>
+              <td>31</td>
+              <td>16</td>
+              <td>35.23 CR</td>
+            </tr>
+            <tr>
+              <td>Eucation Platform</td>
+              <td>78</td>
+              <td>9</td>
+              <td>119.6 CR</td>
+            </tr>
+            <tr>
+              <td>Library Management</td>
+              <td>43</td>
+              <td>12</td>
+              <td>29.75 CR</td>
+            </tr>
+            <tr>
+              <td>resource Management</td>
+              <td>43</td>
+              <td>23</td>
+              <td>56.8 CR</td>
+            </tr>
+          </tbody>
         </table>
+      </div>
+      </div>
+
+
     </div>
-
-</div>
     <footer>
-        <p> copyright@Livares Technologies Pvt Ltd</p>
-     </footer>
-
-
-
-</body>
+      <p>copyright@Livares Technologies Pvt Ltd</p>
+    </footer>
+  </body>
 </html>
