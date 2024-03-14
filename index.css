@@ -2,8 +2,21 @@
   margin:0;
   padding: 0;
 }
-
 /* new */
+
+
+#top-button{
+  position: fixed;
+  z-index: 1;
+  right: 20px;
+  bottom: 20px;
+  display: none;
+  
+}
+/* .scroll-button-session{
+  background-color: aqua;
+} */
+
 .card-block{
   display:flex;
   flex-wrap: wrap;
@@ -24,9 +37,8 @@ h2{
   justify-content: space-around;
   margin: 20px;
 }
-
 .contact-block {
-  
+ 
   padding-top: 10%;
   width: 40%;
   padding: 15px;
@@ -41,6 +53,11 @@ h2{
   font-size: 15px;
   font-weight: bold;
 }
+
+
+
+
+
 
 
 
@@ -83,9 +100,7 @@ nav img {
 .sub-block {
   display: flex;
 }
-.card {
-  /* position: relative; */
-}
+
 .img-sub {
   margin-left: 22%;
   width: 350px;

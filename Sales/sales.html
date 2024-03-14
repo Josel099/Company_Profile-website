@@ -21,14 +21,14 @@
 
     <div class="main-container">
       <div class="sidemenu-container">
-        <a href="#daily-sales-table" onclick="fadeMP()">Daily Sales</a> <br />
-        <a href="#monthly-sales-table" onclick="fadeDP()">Monthly Sales</a><br />
-        <a href="#productwise-sales-table" onclick="fadeDM()">Product wise Sales</a><br />
+        <a href="#daily-sales-table" onclick='fade("daily-sales-table")'>Daily Sales</a> <br />
+        <a href="#monthly-sales-table" onclick='fade("monthly-sales-table")'>Monthly Sales</a><br />
+        <a href="#productwise-sales-table"onclick='fade("productwise-sales-table")'>Product wise Sales</a><br/>
       </div>
 
       <div class="table-container">
 
-        <div id="daily-sales-table">
+        <div id="daily-sales-table" class="table-session">
           <h1>Daily Sales</h1>
           <table class="sales-table">
             <thead>
@@ -83,7 +83,7 @@
         </div>
 
 
-        <div id="monthly-sales-table">
+        <div id="monthly-sales-table" class="table-session">
                     <h1>Monthly Sales</h1>
         <table class="sales-table">
           <thead>
@@ -134,7 +134,7 @@
         </div>
 
 
-        <div id="productwise-sales-table">
+        <div id="productwise-sales-table" class="table-session">
         <h1>Product-wise Sales</h1>
         <table class="sales-table" >
           <thead>
