@@ -6,28 +6,6 @@
 nav img {
   height: 80px;
 }
-.cart-icon{
-  
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 h3{
     text-align: center;
@@ -88,13 +66,18 @@ color: #3d414e;
   font-size: 19px;
   font-family: monospace;
 }
+.btns-add-dec{
+    display:flex;
+    justify-content: space-evenly;
+}
 
 .btn {
-  width: 100%;
+  width: 20%;
   background-color: #4a6a92;
   font-weight: bold;
   border: none;
 }
+
 
 .btn:hover {
   background-color: #778ed2;
