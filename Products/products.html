@@ -19,7 +19,7 @@
   <body>
     <!-- navbar starts -->
     <nav
-      class="navbar navbar-expand-lg bg-body-tertiary"
+      class="navbar navbar-expand-lg bg-body-tertiary sticky-top"
       style="--bs-navbar-padding-y: 0rem"
     >
       <div
@@ -60,12 +60,10 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="/Products/products.html"
-                >Products</a
-              >
+              <a class="nav-link" href="/Products/products.html">Products</a>
             </li>
 
-             <!-- <li class="nav-item cart-icon">
+            <!-- <li class="nav-item cart-icon">
            <a  class="nav-link" href="/Products/cart/cart.html">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" fill="currentColor" class="bi bi-bag-check-fill" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0m-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0z"/>
@@ -74,17 +72,31 @@
           </li> -->
           </ul>
           <!-- cart-icon -->
-              
         </div>
-               <span class="cart-icon">
-               <a  class="nav-link" href="/Products/cart/cart.html">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" fill="currentColor" class="bi bi-bag-check-fill" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0m-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0z"/>
-            </svg> 0
-</a> </span>
+        <span class="cart-icon">
+          <a
+            class="nav-link"
+            href="/Products/cart/cart.html"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="20"
+              fill="currentColor"
+              class="bi bi-bag-check-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0m-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0z"
+              />
+            </svg>
+           <span id="product-count-text"></span>
+          </a>
+        </span>
       </div>
-      
     </nav>
+
     <!-- navbar ended -->
 
     <!-- product card session -->
@@ -98,7 +110,6 @@
           <button href="#" class="btn btn-primary">Add to Cart</button>
         </div>
       </div> -->
-  
     </div>
 
     <!-- bootstrap link -->

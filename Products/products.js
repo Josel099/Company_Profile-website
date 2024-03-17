@@ -1,16 +1,21 @@
-// window.addEventListener("load", function () {
-//     productFetch();
-//   });
-// triggering product fetch when the page is loads 
-let productFetchCalled = false;
+/*window.addEventListener("load", function () {
+    productFetch();
+  }); */
+// document.addEventListener("DOMContentLoaded",productFetch());
 
+
+
+// triggering product fetch when the page is loads 
+productFetchCalled = false;
 window.addEventListener("load", function () {
+
   if (!productFetchCalled) {
     productFetch();
+    displayProductCount(); // calling function for display the count of the product in the cart icon area
     productFetchCalled = true;
   }
 });
-// document.addEventListener("DOMContentLoaded",productFetch())
+
 
 
 // function calling for fetch the data and make the card for each product
@@ -74,8 +79,8 @@ function productFetch() {
 
 
 
-/** 
- * ============================================
+/*
+============================================
 use to add products to cart , 
 adding the id of the each product to an
 key value pair object .
@@ -99,10 +104,33 @@ function addProduct(productId) {
     }else cartData[productId] = 1;
 
 
+    displayProductCount(); // calling the displayProductCount function to display the product count in the cart icon area
 
-    console.log(cartData[productId]);
+    // console.log(cartData[productId]);
+
     // Convert the updated cart data to JSON and store it in local storage
     cartData = JSON.stringify(cartData);
     localStorage.setItem("cartData", cartData);
     
 }
+
+
+
+// funtion for displaying product count in the cart icon area 
+function displayProductCount(){
+
+  // Retrieve existing cart data from local storage
+  let cartData = localStorage.getItem("cartData");
+
+  //checking the cartData is exists or not
+  if(!cartData) document.getElementById("product-count-text").innerHTML = 0;
+  else{
+    // Parse the existing cart data from JSON
+    cartData = JSON.parse(cartData);
+
+    let allProdcutCount = Object.values(cartData); // getting the all product count Values from the cartData
+    let sumOfProductCount = allProdcutCount.reduce(
+      (accumulator, current) => accumulator + current,0); // finding sum of all product count using reduce method
+
+    document.getElementById("product-count-text").innerHTML = sumOfProductCount; // setting the sum of the product count to the productCount element
+  }}
