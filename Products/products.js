@@ -99,19 +99,17 @@ function addProduct(productId) {
   }
 
   // Increment the count for the given product ID
-  if (cartData[productId] != null) {
-    cartData[productId] = cartData[productId] + 1;
-  } else cartData[productId] = 1;
-
-  console.log("added one product");
-
+  if (!cartData[productId]) {
+   cartData[productId] = 1;
   // console.log(cartData[productId]);
 
   // Convert the updated cart data to JSON and store it in local storage
   cartData = JSON.stringify(cartData);
   localStorage.setItem("cartData", cartData);
   displayProductCount(); // calling the displayProductCount function to display the product count in the cart icon area
-}
+
+}else alert("Alerady in the cart")
+  }
 
 
 
@@ -130,6 +128,5 @@ function displayProductCount(){
     let allProdcutCount = Object.values(cartData); // getting the all product count Values from the cartData
     let sumOfProductCount = allProdcutCount.reduce(
       (accumulator, current) => accumulator + current,0); // finding sum of all product count using reduce method
-        console.log(sumOfProductCount)
     document.getElementById("product-count-text").innerHTML = sumOfProductCount; // setting the sum of the product count to the productCount element
   }}

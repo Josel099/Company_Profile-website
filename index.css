@@ -4,7 +4,16 @@
 }
 /* new */
 nav img {
-  height: 80px;
+  height: 85px;
+  ;
+  
+}
+.navbar-nav{
+  font-size: larger;
+  font-weight: bold;
+}
+.nav-link{
+  margin: 20px;
 }
 
 #top-button{
@@ -13,7 +22,15 @@ nav img {
   right: 20px;
   bottom: 20px;
   display: none;
+  color:white;
+  background-color: black;
   
+}
+
+
+
+.d-block{
+  height: 450px;
 }
 
 

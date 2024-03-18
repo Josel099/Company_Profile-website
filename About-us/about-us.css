@@ -4,26 +4,19 @@ body {
    background-color: rgb(223, 234, 252);
 }
 /* navabar */
-.head{
-    background-color: rgb(72, 127, 230);
-    height: 70px;
-    display:flex;
-    justify-content: space-between;
-    
+nav img {
+  height: 85px;
+  ;
+  
 }
-.nav {
-    text-align: center;
-    padding: 15px;
-    font-size: 24px;
-    
-    width: 50%;
-    display: flex;
-    justify-content: space-evenly;
+.navbar-nav{
+  font-size: larger;
+  font-weight: bold;
 }
-a{
-    text-decoration: none;
-    color:#fff;
+.nav-link{
+  margin: 20px;
 }
+
 
 /* navbar ended */
 

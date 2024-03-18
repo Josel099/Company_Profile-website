@@ -12,7 +12,9 @@ window.addEventListener("load", function () {
 // function for fetch the data from the local storage and make the card for each product
 function cartProductFetch() {
   let cartData = localStorage.getItem("cartData");
-  const container = document.getElementById("product-container");
+  let  totalAmount =0; // variable for finding total amount in the cart products
+
+  const container = document.getElementById("product-container"); // container element which is for  creating the cards in it.
   container.innerHTML = ""; // clear the container
 
   // check data exists
@@ -24,22 +26,24 @@ function cartProductFetch() {
   let productsId = Object.keys(cartData); // taking product id from cartData
 
   // dispalying each product in cart page by their product id
-  productsId.forEach((productId) => {
+ productsId.forEach((productId) => {
     fetch(`http://fakestoreapi.com/products/${productId}`)
       .then((res) => res.json())
       .then((data) => {
-
-
-        // Display product details in the cart page
-        console.log(data);
-
-       
-        card =displayCard(data);
+        // Display product details in the cart page usig a card
+        card = displayCard(data);
         container.appendChild(card);
+
+        // finding the totalAmount of cart products to display in the total amount session
+        totalAmount = totalAmount + data.price;
+        document.getElementById("total-amount").innerHTML =
+          "Total Amount: $" + totalAmount.toFixed(2); // toFixed(2) is used to display 2 decimal places
       });
   });
+  }
+
 }
-}
+
 
 
 // function for display the product details in the cart page
@@ -72,17 +76,18 @@ function displayCard(product) {
   price.textContent = "Price: $" + product.price; // product price setting to price
 
 
-  // Creating  button for adding to cart
-  // const button = document.createElement("button");
-  // button.classList.add("btn", "btn-primary");
-  // button.textContent = "Add to Cart";
-  // button.onclick = function () {
-  //   addProduct(product.id);
-  // };
+  // Creating  button for remove item from the  cart
+   const button = document.createElement("button");
+   button.classList.add("btn", "btn-secondary");
+   button.textContent = "Remove Item";
+    button.onclick = function () {
+    removeProduct(product.id);
+  };
 
   // appending  elements to the card-body
   cardBody.appendChild(title);
   cardBody.appendChild(price);
+  cardBody.appendChild(button);
 
   // appending elements to the card
   card.appendChild(img);
@@ -112,3 +117,39 @@ function displayProductCount(){
 
     document.getElementById("product-count-text").innerHTML = sumOfProductCount; // setting the sum of the product count to the productCount element
   }}
+
+
+
+  //function for removing item from the cart
+  function removeProduct(productId){
+    let cartData = JSON.parse(localStorage.getItem("cartData"));
+    delete cartData[productId];
+    
+    // Convert the updated cart data to JSON and store it in local storage
+    cartData = JSON.stringify(cartData);
+    localStorage.setItem("cartData", cartData);
+
+   
+    //recalling the product fetch for  showing  the updated content 
+    cartProductFetch();
+    //calling displayproductcount function for showing the updated productcount 
+    displayProductCount();
+  }
+
+
+
+
+
+
+
+  // place order  and clear cart operations 
+function clearCart(flag){
+   let cartData = localStorage.getItem("cartData");
+   if(cartData){
+     localStorage.clear();
+     if (flag == 1) alert("Order is Placed");
+     else alert("cleared the Cart");
+   }
+  location.reload();
+}
+
