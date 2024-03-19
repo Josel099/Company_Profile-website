@@ -3,6 +3,7 @@
     margin: 0;
     
 }
+
 nav img {
   height: 85px;
   ;
@@ -33,6 +34,7 @@ h1, h2, h3,form, select, label {
   padding: 30px;
   margin-bottom: 6%;
   background-color: #f3f6fd;
+  height: 75vh;
 }
 
 
@@ -45,6 +47,20 @@ h1, h2, h3,form, select, label {
   line-height: 3;
   font-size: 18px;
 }
+
+
+
+
+#firstname-alert,#lastname-alert,#email-alert1,#email-alert2,#number-alert1,#number-alert2,#gender-alert,#country-alert{
+  display: none;
+}
+/* #lastname-alert{
+  display: none;
+} */
+
+
+
+
 
 
 .form-section {
@@ -70,25 +86,6 @@ form p{
   width: 100px;
 
 }
-
-
-
-
-
- 
-#firstname-alert,#lastname-alert,#email-alert1,#email-alert2,#number-alert1,#number-alert2,#gender-alert,#country-alert{
-  display: none;
-}
-/* #lastname-alert{
-  display: none;
-} */
-
-
-
-
-
-
-
 
 
 input[type="text"],
@@ -123,6 +120,8 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #436ca8;
 }
+
+
 
 
 footer{
