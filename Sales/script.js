@@ -8,17 +8,20 @@ function fade(elementId) {
   var tables = document.querySelectorAll(".table-session");
  
   for (var i = 0; i < tables.length; i++) {
-  var display = window
-      .getComputedStyle(tables[i])
-      .getPropertyValue("display");
+  var display = window.getComputedStyle(tables[i]).getPropertyValue("display");
     if (display === "block") {
       fadeElement = tables[i];
       break;
     }
   }
+
+
   fadeOut(fadeElement);
   fadeIn(element);
 }
+
+
+
 
 // fade in and fade out funtions
 function fadeIn(element) {

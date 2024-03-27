@@ -18,7 +18,7 @@ function checkEmpty(){
   let countryInput = document.forms["my-form"].country.value;
 
   // condition  to validate firstname  input field
-  if (firstname == "" || firstname.trim() == "") {
+  if (firstname.trim() == "") {
     // The trim() method is used to remove leading and trailing whitespace from the input
     document.getElementById("firstname-alert").style.display = "block";
   } else document.getElementById("firstname-alert").style.display = "none";
